@@ -1,5 +1,13 @@
-# Object file
-*.o
+/node_modules
+/package-lock.json
+/bearshop
+/#src/*
+!/#src/img/
+!/#src/js/
+!/#src/scss/
+!/#src/*.html
 
-# Ada Library Information
-*.ali
+
+
+
+
