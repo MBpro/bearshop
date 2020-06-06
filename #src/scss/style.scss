@@ -1,28 +1,4 @@
-/*::::::::::::::::::::::::::::::::::::::::::::: OPTIMISATION :::::::::::::::::::::::::::::::::::::::::::::*/
+@import"normalize";
+@import "fonts"; 
+@import"scaffolding";
 
-html, body { height: 100%; margin: 0; padding: 0; border: 0; box-sizing: border-box; }
-*,*:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: inherit; }
-main, aside, nav, footer, header, section { display: block; }
-a { text-decoration: none;}
-img{ max-width: 100%; }
-input, button, textarea{ font-family: inherit;  font-size: 100%; }
-h1, h2, h3, h4, h5, h6 { font-family: inherit; font-weight: inherit; margin-block-start: 0;
-    margin-block-end: 0;}
-ul{padding-inline-start: 0; margin-block-start: 0; margin-block-end: 0; margin-inline-start: 0; margin-inline-end: 0;}
-figure{margin: 0;}
-p{margin-block-start:0;margin-block-end:0;}
-
-/*::::::::::::::::::::::::::::::::::::::::::::: FONTS :::::::::::::::::::::::::::::::::::::::::::::*/
-
-@mixin font($font_name, $file_name, $weight, $style) { /*для удоб. работы*/
-
-    @font-face {
-    font-family: $font_name;
-    font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-    font-weight: #{$weight};
-    font-style: #{$style};
-    }
-    }
-
-@import "fonts"; /*подключаем шрифты*/
