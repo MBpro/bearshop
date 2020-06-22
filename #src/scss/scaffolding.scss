@@ -9,6 +9,8 @@ h1, h2, h3, h4, h5, h6 { font-family: inherit; font-weight: inherit; margin-bloc
 ul{padding-inline-start: 0; margin-block-start: 0; margin-block-end: 0; margin-inline-start: 0; margin-inline-end: 0;}
 figure{margin: 0;}
 p{margin-block-start:0;margin-block-end:0;}
+picture{margin:0; padding:0;display: block;}
+
 
 
 @mixin font($font_name, $file_name, $weight, $style) {
@@ -23,8 +25,8 @@ p{margin-block-start:0;margin-block-end:0;}
 }
 
 body{
-     display: flex;
-     flex-direction: column;
+     //display: flex;
+     //flex-direction: column;
      min-width: 320px;
      min-height:100%;
 
@@ -35,22 +37,20 @@ body{
     color: #000000;
 }
 
-.page-main{
-    flex: 1 1 auto;
-}
+
+//.page-main{
+//   flex: 1 1 auto;
+//}
 
 .visually-hidden {
     position: absolute;
-  
     width: 1px;
     height: 1px;
     margin: -1px;
     border: 0;
     padding: 0;
-  
     white-space: nowrap;
-  
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
