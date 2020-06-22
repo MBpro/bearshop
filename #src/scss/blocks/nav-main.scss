@@ -13,6 +13,10 @@
         padding-left: 48px;
         overflow:visible;   
     } 
+
+    @media(min-width:$desktop-width){
+        padding-left: 100px;   
+    }
 }
 
 .main-nav__logo{
@@ -30,13 +34,17 @@
     }
 
     @media(min-width:$desktop-width){
-      order:2;
-      margin-right:0;
+        order:2;
+        margin-right:0;
     }
     
     &:hover{
         opacity: 0.5;
         transition: all 0.3s ease 0s;
+    }
+
+    &:focus{
+        outline-color: tomato; 
     }
 }
 
@@ -47,7 +55,6 @@
         display: flex;
         flex-wrap: wrap;
    }
-
 }
 
 .main-nav__list--catalog{
@@ -67,26 +74,18 @@
         font-size: 17px;
     }
 }
-/*
-.main-nav__list--catalog > .main-nav__item:first-child{
-    
-    @media(min-width:$tablet-width){
-        margin-right: 36px;  
-    }
 
-    @media(min-width:$desktop-width){
-        padding-right: 36px;
-        border-right: 1px solid #ececec;
-    }
-}
-*/
 .main-nav__list--search{
     order: 3;
     @media(min-width:$tablet-width){
         order: 2;
         align-items: center;
         margin-right: 6.5%; 
-    }  
+    } 
+    
+    @media(min-width:$desktop-width){
+        margin-right:8.95%;  
+    }
 }
 
 .main-nav__list--new{
@@ -121,6 +120,26 @@
     }
 }
 
+.main-nav__item--knitting,
+.main-nav__item--catalog{
+    @media(min-width:$desktop-width){
+        display: flex;
+        height: 88px;
+        align-items: center;
+    }  
+}
+
+.main-nav__item--catalog{
+    @media(min-width:$tablet-width){
+        margin-right: 36px;  
+    }
+
+    @media(min-width:$desktop-width){
+        padding-right: 36px;
+        border-right: 1px solid #ececec;
+    } 
+}
+
 .main-nav__link{
     position: relative;
     display: block;
@@ -137,6 +156,10 @@
     &:hover{
         color:#666666;
         transition: all 0.3s ease 0s;
+    }
+
+    &:focus{
+        outline-color: tomato; 
     }
 
     &:hover path{
@@ -175,15 +198,15 @@
 .main-nav__icon{
     position:absolute;
     left: 32px;
+}
 
-    &--search{
-          
+.main-nav__icon--search{
     @media(min-width:$tablet-width){
         top:40%;
         left:40%;
-        }  
-    }
+    }  
 }
+
 
 .main-nav__delivery{
     display: none;
@@ -194,24 +217,12 @@
         padding-top: 20px;
         margin-right:6.5%; 
         font-size: 15px; 
-    }  
+    }
+    
+    @media(min-width:$desktop-width){
+        margin-right:8.95%;
+    } 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .main-nav__burger--offjs{ //OFFjs burger button
     display: none;
