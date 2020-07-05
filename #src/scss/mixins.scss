@@ -16,3 +16,23 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+@mixin svg-background($z-index, $bottom, $left, $width, $height, $repeat){
+    content: "";
+    position: absolute;
+    z-index:$z-index;
+    bottom:$bottom;
+    left:$left; 
+    width: $width;
+    height:$height;
+    background-repeat:$repeat;
+}
+
+/*@mixin image($width, $height, $color, $url) {
+    width: $width;
+    height: $height;
+    background-color:$color;
+    background-size: $width $height;
+    background-repeat:no-repeat;
+    background-image:url($url);
+  }*/

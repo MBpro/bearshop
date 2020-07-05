@@ -1,17 +1,19 @@
 .main-nav{
+    position: relative;
+    z-index:100;
     display:flex;   
     flex-direction: column;
     justify-content: space-between;
     border-top:1px solid #ececec;
     border-bottom:1px solid #ececec;
+    overflow:visible;  
 
     @media(min-width:$tablet-width){
         height: 90px;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        padding-left: 48px;
-        overflow:visible;   
+        padding-left: 48px; 
     } 
 
     @media(min-width:$desktop-width){
@@ -162,11 +164,6 @@
         outline-color: tomato; 
     }
 
-    &:hover path{
-        fill:#63d1bb;
-        transition: all 0.3s ease 0s;
-    }
-
     &:active{
         opacity: 0.3;
     }
@@ -198,6 +195,18 @@
 .main-nav__icon{
     position:absolute;
     left: 32px;
+}
+
+.main-nav__icon--search,
+.main-nav__icon--basket{
+    fill:#d3d2d2;
+    transition: all 0.3s ease 0s;
+}
+
+.main-nav__link:hover .main-nav__icon--search,
+.main-nav__link:hover .main-nav__icon--basket{
+    fill:#63d1bb;
+    transition: all 0.3s ease 0s;
 }
 
 .main-nav__icon--search{
