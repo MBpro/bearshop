@@ -43,9 +43,10 @@ let { src, dest } = require('gulp'),
     webpcss = require('gulp-webpcss'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
-    fonter = require('gulp-fonter');
-
-
+    fonter = require('gulp-fonter'),
+    svgstore = require('gulp-svgstore'),
+    posthtml = require('gulp-posthtml'),
+    include = require('posthtml-include');
 
 function browserSync(params) {
     browsersync.init({
@@ -62,7 +63,18 @@ function html() {
         .pipe(fileinclude())
         .pipe(webphtml()) // относится к плагину webphtml
         .pipe(dest(path.build.html))
-        .pipe(browsersync.stream())
+        .pipe(src(sourceFolder + '/img/icon-*.svg'))// change name svg
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename('sprite.svg'))
+        .pipe(dest(path.build.img))
+        .pipe(src(sourceFolder + '/*.html'))
+        .pipe(posthtml([
+            include()
+        ]))
+        .pipe(dest(path.build.html))
+        .pipe(browsersync.stream());
 }
 
 function css() {
@@ -146,6 +158,23 @@ gulp.task('otf2ttf', function () { //gulp otf2ttf запускать коман�
         .pipe(dest(sourceFolder + '/fonts/'));
 })
 
+gulp.task('sprite', function () { //gulp sprite (create sprite.svg)
+    return src(sourceFolder + '/img/icon-*.svg')// change name svg
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename('sprite.svg'))
+        .pipe(dest(path.build.img));
+})
+
+gulp.task('posthtml', function () { //gulp posthtml(include sprite.svg in index.html)
+    return src(sourceFolder + '/*.html')
+        .pipe(posthtml([
+            include()
+        ]))
+        .pipe(dest(path.build.html))
+})
+
 function fontsStyle(params) {
 
     let file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
@@ -166,6 +195,9 @@ function fontsStyle(params) {
         })
     }
 }
+
+
+
 
 function cb() {
 
