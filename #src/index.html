@@ -77,33 +77,49 @@
         <article class="top-product">
             <header class="top-product__header">
                 <h2 class="top-product__title">Вязаные корзинки</h2>
-                <p class="top-product__text">Товар недели</p>
+                <p class="top-product__text">Товар<br> недели</p>
             </header>
             <div class="top-product__wrapper">
-                <p class="top-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести
-                    расцветках, и трех размерах.</p>
-                <table class="top-product__table">
-                    <tbody>
-                        <tr>
-                            <td>Цвет:</td>
-                            <td>«Тиффани»/серый</td>
-                        </tr>
-                        <tr>
-                            <td>Диаметр:</td>
-                            <td>25 см</td>
-                        </tr>
-                        <tr>
-                            <td>Высота:</td>
-                            <td>15 см</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="top-product__content">
+                    <p class="top-product__description">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести
+                        расцветках, и трех размерах.</p>
+                    <table class="top-product__table">
+                        <tbody>
+                            <tr>
+                                <td>Цвет:</td>
+                                <td>«Тиффани»/серый</td>
+                            </tr>
+                            <tr>
+                                <td>Диаметр:</td>
+                                <td>25 см</td>
+                            </tr>
+                            <tr>
+                                <td>Высота:</td>
+                                <td>15 см</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <picture class="top-product__image">
+                    <source type="image/webp" media="(min-width: 1150px)"
+                        srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                    <source type="image/webp"
+                        srcset="img/triple-set-mobile@1x.webp 1x , img/triple-set-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1150px)"
+                        srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)"
+                        srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                    <img class="product-item__image" src="img/triple-set-mobile@1x.jpg"
+                        srcset="img/triple-set-mobile@2x.jpg 2x" alt="Пряжа, ручной работы">
+                </picture>
+                <footer class="top-product__footer">
+                    <p class="top-product__price">Цена: 990 руб.</p>
+                    <a href="#" class="top-product__link">Заказать</a>
+                </footer>
             </div>
-            <picture class="top-product__image"></picture>
-            <footer class="top-product__footer">
-                <p class="top-product__price">Цена: 990 руб.</p>
-                <a href="#" class="top-product__link">Заказать</a>
-            </footer>
         </article>
         <section class="about">
             <h2 class="about__title">Коротко о нас:</h2>
@@ -125,8 +141,8 @@
                 <a href="#">@misssssiskras</a>
             </p>
             <div class="reviews__slider-control">
-                <span class="reviews__back"></span>
-                <span class="reviews__next"></span>
+                <button class="reviews__button reviews__button--back"></button>
+                <button class="reviews__button reviews__button--next"></button>
             </div>
             <a class="reviews__link" href="#">Написать</a>
         </section>

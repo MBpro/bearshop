@@ -1,0 +1,212 @@
+.top-product{
+    display: flex;
+    flex-direction:column;
+    align-items: left;
+    margin-bottom: 73px;
+    padding-left: (30px/320px*100%);
+    padding-right: (30px/320px*100%);
+
+    @media(min-width:$tablet-width) {
+        padding-left:  (50px/768px*100%);
+        padding-right: (50px/768px*100%);
+    }
+
+    @media(min-width:$desktop-width) {
+        padding-left:  (100px/1150px*100%);
+        padding-right: (100px/1150px*100%);
+    }
+}
+
+.top-product__header{
+    margin-bottom:24px;
+    padding-right: 28px;
+
+    @media(min-width:$tablet-width) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 54px;
+    }
+
+    @media(min-width:$desktop-width) {
+        position: relative;
+        z-index: 5;
+        justify-content: flex-start;
+        margin-bottom: -110px;
+        
+    }
+}
+
+.top-product__title{
+    margin-bottom: 6px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+    
+    @media(min-width:$tablet-width) {
+        margin-bottom: 0;
+        font-size: 43px;
+        line-height: 50px;
+    }
+
+    @media(min-width:$desktop-width) {
+      order: 2;
+      font-size: 53px;
+      line-height: 57px;
+    }
+}
+
+.top-product__text{
+    font-weight: bold;
+    line-height: 20px;
+    color: #78d7c4;
+    text-transform: uppercase;
+    line-height: 30px;
+    
+    @media(min-width:$tablet-width) {
+        align-self:center;
+        line-height: 17px;
+        text-align: center;
+    }
+
+    @media(min-width:$desktop-width) {
+        padding-left: 52px;
+        padding-right: 52px;
+      }
+}
+
+.top-product__text br{
+    display: none;
+    @media(min-width:$tablet-width) {
+        display: block;
+    }
+}
+
+.top-product__wrapper{
+    display: flex;
+    flex-direction:column;
+   
+   @media(min-width:$tablet-width) {
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+}
+
+.top-product__content{
+    margin-bottom: 30px;
+
+    @media(min-width:$tablet-width) {
+        flex:0 1 50%;
+        padding-right: 44px;
+        margin-bottom: 0;
+        margin-top: -11px;
+    }
+
+    @media(min-width:$desktop-width) {
+        padding-left: 175px;
+    }
+}
+
+.top-product__description{
+    margin-bottom:27px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+
+    @media(min-width:$tablet-width) {
+        margin-bottom:47px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    @media(min-width:$desktop-width) {
+        margin-bottom: 57px;
+        padding-top: 165px;
+    }
+}
+
+.top-product__table{
+    width: 100%;
+    font-size: 15px;
+    line-height: 40px;
+    color: #444444;
+    border-collapse:collapse;
+    border-spacing: 0;
+}
+
+.top-product__table td{
+    border-bottom:1px solid #ececec;
+}
+
+.top-product__image{
+    margin-bottom: 26px;
+
+    @media(min-width:$tablet-width) {
+        flex:0 1 50%;
+        margin-bottom: 0;
+    }
+}
+
+.product-item__image{
+    display: block;
+
+    @media(min-width:$tablet-width) {
+        height: 406px;
+    }
+
+    @media(min-width:$desktop-width) {
+        width: 525px;
+        height: 636px;
+    }
+}
+
+.top-product__footer{
+    text-align: center;
+
+    @media(min-width:$tablet-width) {
+       margin-top:-110px;
+    }  
+
+    @media(min-width:$desktop-width) {
+        padding-left: 175px;
+    }
+}
+
+.top-product__price{
+    margin-bottom: 26px;
+    font-weight: bold;
+    color: #444444;
+    
+    @media(min-width:$tablet-width) {
+        margin-bottom: 31px;
+        font-size: 20px;
+    } 
+}
+
+.top-product__link{
+    display: block;
+    padding:15px 82px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #444444;
+    text-transform: uppercase;
+    border: 2px solid #444444;
+    transition:all 0.3s ease 0s;
+
+    @media(min-width:$tablet-width) {
+        padding:15px 100px;
+     }  
+ 
+     @media(min-width:$desktop-width) {
+        padding:15px 84px;
+     }
+
+     &:hover{
+        background-color: #444444;
+        color: #ffffff;
+        transition:all 0.3s ease 0s;  
+    }
+
+     &:active{
+        color: #7c7c7c;
+    }
+}
