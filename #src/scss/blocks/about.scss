@@ -1,0 +1,146 @@
+.about{
+    margin-bottom: 20px;//57
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    @media(min-width:$tablet-width) {
+        margin-bottom: 47px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media(min-width:$desktop-width) {
+        margin-bottom: 54px;
+        padding-left: 225px;
+        padding-right: 225px;
+    }
+}
+
+.about__title{
+    margin-bottom: 24px; //82px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+
+    @media(min-width:$tablet-width) {
+        margin-bottom: 39px;
+        font-size: 43px;
+        line-height: 50px; 
+    }
+
+    @media(min-width:$desktop-width) {
+        margin-bottom: 41px;
+        font-size: 53px;
+        line-height: 57px; 
+    }
+}
+
+.about__list{
+    @include list-style-reset;
+
+    @media(min-width:$tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.about__item{
+    width: 230px;
+    position: relative;
+    padding-top: 56px;
+    padding-bottom: 33px;
+    font-weight: bold;
+    line-height: 20px; 
+
+    @media(min-width:$tablet-width) {
+        width: 334px;
+        padding-right: (50px/768px*100%);
+        font-size: 20px;
+        line-height: 22px; 
+
+        &--eco{
+            order: 1;
+        }
+
+        &--price{
+            order: 3;
+        }
+
+        &--like{
+            order: 5;
+        }
+
+        &--handmade{
+            order: 2;
+        }
+
+        &--patriot{
+            order: 4;
+        }
+
+        &--present{
+            order: 6;
+        }
+    }
+
+    @media(min-width:$desktop-width) {
+        width: 350px;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+
+}
+
+.about__item--eco::before{
+    left: 8px;
+    top: 0;
+    width: 33px;
+    height: 38px;
+    background-image: url(../img/flower.svg);
+    
+}
+
+.about__item--price::before{
+    left: 0;
+    top: 0;
+    width: 47px;
+    height: 27px;
+    background-image: url(../img/price.svg);
+}
+
+.about__item--like::before{
+    left: 6px;
+    top: -5px;
+    width: 34px;
+    height: 27px;
+    background-image: url(../img/heart.svg);
+}
+
+.about__item--handmade::before{
+    left: 3px;
+    top: -2px;
+    width: 35px;
+    height: 34px;
+    background-image: url(../img/clew.svg);
+}
+
+.about__item--patriot::before{
+    left: -5px;
+    top: -2px;
+    width: 55px;
+    height: 23px;
+    background-image: url(../img/rocket.svg);
+}
+
+.about__item--present::before{
+    left: 3px;
+    top: -1px;
+    width: 33px;
+    height: 32px;
+    background-image: url(../img/present.svg);
+}
