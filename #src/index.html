@@ -135,15 +135,26 @@
         </section>
         <section class="reviews">
             <h2 class="reviews__title">Отзывы</h2>
-            <p class="reviews__slider"><q>Я молодая мама, но всё равно фотографии не набирали и близко такого
+            <div class="reviews__slider">
+                <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого
                     количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в
-                    Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</q>
-                <b>Анастасия Красильникова</b>
-                <a href="#">@misssssiskras</a>
-            </p>
+                    Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <p class="reviews__autor">Анастасия Красильникова</p>
+                <a class="reviews__link-mail" href="#">@misssssiskras</a>
+            </div>
             <div class="reviews__slider-control">
-                <button class="reviews__button reviews__button--back"></button>
-                <button class="reviews__button reviews__button--next"></button>
+                <button class="reviews__button reviews__button--back">
+                    <svg width="51" height="26">
+                        <use xlink:href="#icon-button-back"></use>
+                    </svg>
+                    <span class="visually-hidden">Кнопка назад</span>
+                </button>
+                <button class="reviews__button reviews__button--next">
+                    <svg width="51" height="26">
+                        <use xlink:href="#icon-button-next"></use>
+                    </svg>
+                    <span class="visually-hidden">Кнопка вперед</span>
+                </button>
             </div>
             <a class="reviews__link" href="#">Написать</a>
         </section>
