@@ -14,4 +14,3 @@ let burgerButton = document.querySelector('#toggle').onclick = function () {
         onJsMenuOpened[i].classList.toggle('js-main-nav__list--opened');
     }
 }
-

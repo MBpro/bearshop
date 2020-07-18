@@ -26,7 +26,7 @@
     padding-top: 22px;
     padding-bottom: 22px;
     text-align: center;
-    transition: all 0.5s ease 0s;
+   // transition: all 0.5s ease 0s;
     
     @media(min-width:$tablet-width){
         border:none;
@@ -40,14 +40,14 @@
         margin-right:0;
     }
     
-    &:hover{
+   /* &:hover{
         opacity: 0.5;
         transition: all 0.3s ease 0s;
     }
 
     &:focus{
         outline-color: tomato; 
-    }
+    }*/
 }
 
 .main-nav__list{
