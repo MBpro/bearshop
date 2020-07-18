@@ -24,7 +24,7 @@
         }
 
         &::before{
-        @include svg-background(1, -16px, 0, 100%, 32px, repeat-x); //$z-index, $bottom, $left, $width, $height, $repeat
+        @include svg-background(1, -12px, 0, 100%, 32px, repeat-x); //$z-index, $bottom, $left, $width, $height, $repeat
             background-image: url("../img/bg-zigzag.svg");
         }
     }
@@ -97,6 +97,10 @@
         margin-top: -5px;
         padding-bottom:32px;
         transition:all 0.3s ease 0s;  
+    }
+
+    &:focus{
+        outline-color: tomato; 
     }
 }
 

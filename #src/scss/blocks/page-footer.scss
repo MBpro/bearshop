@@ -51,15 +51,19 @@
 .page-footer__link{
     fill: #221f1f;
     transition:all 0.3s ease 0s;
-}
 
-.page-footer__link:hover{
-    fill: #46c1ae;
-    transition:all 0.3s ease 0s;
-}
+    &:hover{
+        fill: #46c1ae;
+        transition:all 0.3s ease 0s;
+    }
 
-.page-footer__link:active{
-    fill: #bde3dd;
+    &:focus{
+        outline-color: tomato; 
+    }
+
+    &:active{
+        fill: #bde3dd;
+    }
 }
 
 .page-footer__contener{
@@ -67,14 +71,16 @@
     justify-content: center;
     padding-top:29px;
     color: inherit;
+
     @media(min-width: $tablet-width) {
         padding-top: 0;
     }
 }
 
 .page-footer__link-text{
+    display: flex;
+    align-items: center;
     margin-right: (30px/320px*100%);
-    padding-top: 5px;
     font-size: 19px;
     font-weight: bold;
     color: inherit;
@@ -84,6 +90,10 @@
     @media(min-width: $tablet-width) {
         margin-right: 30px;
     }
+
+    &:focus{
+        outline-color: tomato; 
+    }
     
     &:active{
         color:#a8a8a8;
@@ -91,8 +101,13 @@
 }
 
 .page-footer__link-desing{
+    margin-bottom: -12px;
     fill: #63d1bb;
     transition:all 0.3s ease 0s;
+
+    &:focus{
+        outline-color: tomato; 
+    }
 }
 
 .page-footer__link-desing:hover{

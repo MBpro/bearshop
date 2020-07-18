@@ -68,7 +68,7 @@
             left: (50/1050*100%);
             width: (1050px/1150px*100%);
             height: 24px;
-            background-size: 1050px 23px;
+            background-size: 1050px 24px;
         }
     }
 }
@@ -81,6 +81,7 @@
     color: #444444;
 
     @media(min-width:$tablet-width){
+        flex: 1 0 100%;
         order: 2;
         margin-bottom: 0;
     }
@@ -127,6 +128,10 @@
 
 .reviews__link-mail{
     color:inherit;
+    
+    &:focus{
+        outline-color: tomato; 
+    }
 }
 
 .reviews__slider-control{
@@ -152,8 +157,11 @@
     height: 52px;
     background-color:transparent;
     border: none;
-    outline: none;
     cursor: pointer;
+    
+    &:focus{
+        outline-color: tomato; 
+    }
 
     &:first-child{
         border-right: 1px solid #ececec;
@@ -223,6 +231,10 @@
         color: #ffffff;
         background-color: #444444;
         transition:all 0.3s ease 0s;
+    }
+
+    &:focus{
+        outline-color: tomato; 
     }
 
     &:active{
