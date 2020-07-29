@@ -1,7 +1,7 @@
 @import"normalize";
 @import"svginherit";
-@import"scaffolding";
 @import"variables";
+@import"scaffolding";
 @import "fonts";
 @import"mixins";
 @import"blocks/page-header.scss";
@@ -13,6 +13,8 @@
 @import"blocks/reviews.scss";
 @import"blocks/contacts.scss";
 @import"blocks/page-footer.scss";
+@import"blocks/modal-cart.scss";
+@import"blocks/background-modal.scss";
 
 
 

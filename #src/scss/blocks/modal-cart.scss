@@ -1,0 +1,170 @@
+.modal-cart{
+    position: fixed;
+    z-index: 300;
+    display: none;
+    width: 240px;
+    left: 50%;
+    top: 50%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+
+    @media(min-width: $tablet-width){
+        width: 370px;
+    }
+
+    @media(min-width: $desktop-width){
+        width: 400px;
+    }
+}
+
+.js-modal-cart-show{
+    display: block;
+}
+
+.modal-cart__wrapper{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+.modal-cart__title{
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+
+    @media(min-width: $tablet-width){
+        margin-bottom: 26px;
+        font-size:  32px;
+        line-height: 40px;
+    }
+}
+
+.modal-cart__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.modal-cart__input{
+    display: none;
+    
+    &:checked + .modal-cart__label{
+        border: 2px solid #62d1ba;
+    }
+}
+
+.modal-cart__label{
+    width: 82px; 
+    height: 42px;
+    padding: 12px 0;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 16px;
+    color: #444444;
+    text-align: center;
+    border: 2px solid #ececec;
+    transition:all 0.3s ease 0s;
+    cursor: pointer;
+
+    @media(min-width: $desktop-width){
+        width: 112px;
+        height: 52px;
+        padding: 16px 0;
+    }
+
+    &:hover{
+        border: 2px solid #c7c7c7;
+        transition:all 0.3s ease 0s; 
+    }
+
+    &:focus{
+        outline-color:tomato;
+    }
+}
+
+.modal-cart__label:not(:last-child){
+    margin-bottom: 26px;
+}
+
+.modal-cart__button{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 8px 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    text-transform:  uppercase;
+    background: transparent;
+    border: 2px solid #444444;
+    cursor: pointer;
+    transition:all 0.3s ease 0s;
+
+    @media(min-width: $tablet-width){
+        width: 260px;
+        font-size: 17px;
+    }
+
+    &:hover{
+        color: #ffffff;
+        background-color: #444444;
+        transition:all 0.3s ease 0s;
+    }
+    &:focus{
+        outline-color:tomato;
+    }
+}
+
+.button-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    border: none;
+    outline:none;
+    background: transparent;
+
+    @media(min-width: $tablet-width){
+        right: 10px;
+        top: 10px;
+    }
+
+}
+
+.modal-cart__span{
+    position: relative;
+    top:-1px;
+    right: 7px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top:11px;
+        width: 100%;
+        border-top: 2px solid black;
+        transform: rotate(-45deg); 
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 9px;
+        width: 100%;
+        border-bottom: 2px solid black; 
+        transform: rotate(45deg);
+    }
+}

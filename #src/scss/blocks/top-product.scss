@@ -1,8 +1,9 @@
 .top-product{
+   //border: 1px solid blue;
     position: relative;
-    display: flex;
-    flex-direction:column;
-    align-items: left;
+    //display: flex;
+    //flex-direction:column;
+    //align-items: left;
     margin-bottom: 32px;
     padding-left: 30px;
     padding-right: 30px;
@@ -61,8 +62,7 @@
         position: relative;
         z-index: 5;
         justify-content: flex-start;
-        margin-bottom: -110px;
-        
+        margin-bottom: -110px;  
     }
 }
 
@@ -73,6 +73,7 @@
     line-height: 30px;
     
     @media(min-width:$tablet-width) {
+        margin-top: 0;
         margin-bottom: 0;
         font-size: 43px;
         line-height: 50px;
@@ -118,14 +119,16 @@
    @media(min-width:$tablet-width) {
         flex-direction:row;
         flex-wrap: wrap;
+        
     }
 }
 
 .top-product__content{
     margin-bottom: 30px;
-
+    
     @media(min-width:$tablet-width) {
-        flex:0 1 50%;
+        flex:0 1 auto;// support IE11. If do not needed support IE11, delete width:50% and change flex:auto of 50%
+        width: 50%; 
         padding-right: 44px;
         margin-bottom: 0;
         margin-top: -11px;
@@ -171,7 +174,8 @@
     margin-bottom: 26px;
 
     @media(min-width:$tablet-width) {
-        flex:0 1 50%;
+        flex:0 1 auto; // support IE11. If do not needed support IE11, delete width:50% and change flex:auto of 50%
+        width: 50%;
         margin-bottom: 0;
     }
 }
@@ -194,12 +198,17 @@
 
     @media(min-width:$tablet-width) {
        margin-top:-110px;
+
+       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // support IE11.
+            margin-top:-128px;
+        }
     }  
 
     @media(min-width:$desktop-width) {
         padding-left: 175px;
     }
 }
+
 
 .top-product__price{
     margin-bottom: 26px;

@@ -27,14 +27,16 @@ picture{margin:0; padding:0;display: block;}
 body{
      //display: flex;
      //flex-direction: column;
-     min-width: 320px;
-     min-height:100%;
-
+    position: relative;
+    min-width: 320px;
+    min-height:100%;
     font-family: "Open sans", "Arial", sans-serif;
     font-size: 17px;
     font-style: normal;
     line-height: 24px;
     color: #000000;
+    overflow-x: hidden;// for IE-11
+    
 }
 
 //.page-main{
@@ -53,3 +55,16 @@ body{
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.body-lock{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.clear{
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+

@@ -8,7 +8,7 @@
     @media(min-width:$tablet-width){
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        //justify-content: flex-end; This is style do not work in IE11  with margin:auto
         margin-bottom: 68px;
         padding-left: 50px;
         padding-right: 50px;
@@ -81,7 +81,8 @@
     color: #444444;
 
     @media(min-width:$tablet-width){
-        flex: 1 0 100%;
+        width: 100%;
+        flex: 1 0 auto;
         order: 2;
         margin-bottom: 0;
     }
@@ -90,12 +91,13 @@
 .reviews__title{
     position: relative;
     z-index: 1;
-    margin: 0 auto 30px 0;
+    margin-bottom:30px;
     font-size: 25px;
     font-weight: bold;
     line-height: 30px;
 
     @media(min-width:$tablet-width){
+        margin-top: 0;
         margin-bottom: 46px;
         font-size: 43px;
         line-height: 50px;
@@ -139,6 +141,7 @@
     z-index: 1;
     display: flex;
     height: 52px;
+    margin-left: auto;
     margin-bottom: 38px;
     border: 1px solid #ececec;
 
@@ -153,16 +156,14 @@
 
 .reviews__button{
     position: relative;
-    flex: 1 1 100%;
+    width:100%;
+    flex: 0 1 auto;
     height: 52px;
     background-color:transparent;
     border: none;
+    outline: none;
     cursor: pointer;
     
-    &:focus{
-        outline-color: tomato; 
-    }
-
     &:first-child{
         border-right: 1px solid #ececec;
         
@@ -178,7 +179,8 @@
     transition:all 0.3s ease 0s;
 }
 
-.reviews__button:hover svg{
+.reviews__button:hover svg,
+.reviews__button:focus svg{
     fill: #666666;
     transition:all 0.3s ease 0s;
 }
@@ -219,6 +221,7 @@
     @media(min-width:$tablet-width){
         padding: 16px 31px;
         order: 1;
+        margin-left: auto;
         margin-bottom: -66px;
         align-self: start;
     }
