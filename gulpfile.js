@@ -61,18 +61,6 @@ function browserSync(params) {
 function html() {
     return src(path.src.html)
         .pipe(fileinclude())
-        .pipe(webphtml()) // относится к плагину webphtml
-        .pipe(dest(path.build.html))
-        .pipe(src(sourceFolder + '/img/icon-*.svg'))// change name svg
-        .pipe(svgstore({
-            inlineSvg: true
-        }))
-        .pipe(rename('sprite.svg'))
-        .pipe(dest(path.build.img))
-        .pipe(src(sourceFolder + '/*.html'))
-        .pipe(posthtml([
-            include()
-        ]))
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream());
 }
@@ -164,7 +152,7 @@ gulp.task('sprite', function () { //gulp sprite (create sprite.svg)
             inlineSvg: true
         }))
         .pipe(rename('sprite.svg'))
-        .pipe(dest(path.build.img));
+        .pipe(dest(sourceFolder + '/img/'));
 })
 
 gulp.task('posthtml', function () { //gulp posthtml(include sprite.svg in index.html)
