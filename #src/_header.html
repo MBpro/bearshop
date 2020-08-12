@@ -1,0 +1,45 @@
+<header class="page-header">
+    <nav class="main-nav">
+        <a class="main-nav__logo-link" href="index.html">
+            <picture class="main-nav__logo">
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" alt="Логотип интернет магазина Мишка">
+            </picture>
+        </a>
+        <button class="main-nav__burger main-nav__burger--offjs" id="toggle" type="button"
+            aria-label="Кнопка открытия меню">
+            <span class="main-nav__span"></span>
+        </button>
+        <ul class="main-nav__list main-nav__list--offjs main-nav__list--catalog">
+            <li class="main-nav__item main-nav__item--catalog">
+                <a class="main-nav__link" href="catalog.html" target="_blank">Каталог
+                    товаров</a>
+            </li>
+            <li class="main-nav__item main-nav__item--knitting"><a class="main-nav__link" href="form.html"
+                    target="_blank">Вязание на
+                    заказ</a></li>
+        </ul>
+        <ul class="main-nav__list main-nav__list--offjs main-nav__list--search">
+            <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--search" href="#" target="_blank">
+                    <svg class="main-nav__icon main-nav__icon--search" width="18" height="19">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                    <span class="main-nav__text-search">Поиск по сайту</span>
+                </a></li>
+            <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--basket" href="#" target="_blank">
+                    <svg class="main-nav__icon main-nav__icon--basket" width="21" height="18">
+                        <use xlink:href="#icon-cart"></use>
+                    </svg>
+                    <span>Корзина: пока пуста</span>
+                </a></li>
+        </ul>
+        <ul class="main-nav__list  main-nav__list--new">
+            <li class="main-nav__item"><a class="main-nav__link" href="#" target="_blank">Новые поступления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#" target="_blank">Распродажа</a></li>
+        </ul>
+        <span class="main-nav__delivery">Бесплатная доставка по России</span>
+    </nav>
+</header>

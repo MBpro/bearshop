@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div style="display: none">
+        @@include('img/sprite.svg')
+    </div>
+    @@include('_header.html')
+
+    <main class="catalog">
+        <h2 class="catalog__title">Каталог товаров</h2>
+        <div class="catalog__content">
+            <section class="catalog__item">
+                <a class="catalog__link-picture" href="#">
+                    <picture class="catalog__picture">
+                        <source type="image/webp" media="(min-width: 1150px)"
+                            srcset="img/photo-1-desktop@1x.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/photo-1-tablet@1x.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                        <source type="image/webp"
+                            srcset="img/photo-1-mobile@1x.webp 1x , img/photo-1-mobile@2x.webp 2x">
+
+                        <source media="(min-width: 1150px)"
+                            srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                        <img class="catalog__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"
+                            alt="Зайчик-попрыгайчик">
+                    </picture>
+                </a>
+                <div class="catalog__wrapper catalog__wrapper--strech">
+                    <a class="catalog__link" href="#">Зайчик-попрыгайчик</a>
+                    <p class="catalog__description catalog__description--hare">Рост 30 см, вес 200 г</p>
+                    <div class="catalog__price">
+                        <span>1 200 руб.</span>
+                        <span class="visually-hidden ">Заказать</span>
+                        <a class="catalog-link-basket modal-on" href="#">
+                            <svg class="catalog__icon" width="21" height="19">
+                                <use xlink:href="#icon-cart"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog__item">
+                <a class="catalog__link-picture" href="#">
+                    <picture class="catalog__picture">
+                        <source type="image/webp" media="(min-width: 1150px)"
+                            srcset="img/photo-2-desktop@1x.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/photo-2-tablet@1x.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                        <source type="image/webp"
+                            srcset="img/photo-2-mobile@1x.webp 1x , img/photo-2-mobile@2x.webp 2x">
+
+                        <source media="(min-width: 1150px)"
+                            srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                        <img class="catalog__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"
+                            alt="Корзинка для белья">
+                    </picture>
+                </a>
+                <div class="catalog__wrapper">
+                    <a class="catalog__link" href="#">Корзинка для белья</a>
+                    <p class="catalog__description catalog__description--basket">Диаметр 15 см, высота 10 см</p>
+                    <div class="catalog__price">
+                        <span>690 руб.</span>
+                        <span class="visually-hidden ">Заказать</span>
+                        <a class="catalog-link-basket modal-on" href="#">
+                            <svg class="catalog__icon" width="21" height="19">
+                                <use xlink:href="#icon-cart"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog__item">
+                <a class="catalog__link-picture" href="#">
+                    <picture class="catalog__picture">
+                        <source type="image/webp" media="(min-width: 1150px)"
+                            srcset="img/photo-3-desktop@1x.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/photo-3-tablet@1x.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                        <source type="image/webp"
+                            srcset="img/photo-3-mobile@1x.webp 1x , img/photo-3-mobile@2x.webp 2x">
+
+                        <source media="(min-width: 1150px)"
+                            srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                        <img class="catalog__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"
+                            alt="Большая Корзинка для игрушек">
+                    </picture>
+                </a>
+                <div class="catalog__wrapper">
+                    <a class="catalog__link" href="#">Большая корзинка<br>для игрушек</a>
+                    <p class="catalog__description catalog__description--big-basket">Диаметр 15 см, высота 10 см</p>
+                    <div class="catalog__price">
+                        <span>1 500 руб.</span>
+                        <a class="catalog-link-basket modal-on" href="#">
+                            <span class="visually-hidden ">Заказать</span>
+                            <svg class="catalog__icon" width="21" height="19">
+                                <use xlink:href="#icon-cart"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="video">
+            <h2 class="video__title">Процесс<br> производства
+                <svg class="video__icon" width="32" height="22">
+                    <use xlink:href="#icon-video"></use>
+                </svg>
+            </h2>
+            <a href="#" class="video__contener">
+                <picture>
+                    <source type="image/webp" media="(min-width: 1150px)"
+                        srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1150px)"
+                        srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                    <img class="video__img" src="img/video-mobile@1x.jpeg" srcset="img/video-mobile@2x.jpeg 2x"
+                        alt="Пряжа, ручной работы">
+                    <svg class="video__icon-play" width="100" height="76">
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                </picture>
+            </a>
+            <div class="video__wrapper">
+                <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о
+                    том, как появляются наши товары.
+                </p>
+                <a class="video__link" href="#">Сделать заказ</a>
+            </div>
+        </section>
+    </main>
+
+    @@include('_footer.html')
+    <section class="modal-cart">
+        <div class="modal-cart__wrapper">
+            <h2 class="modal-cart__title">Выберите размер</h2>
+            <form class="modal-cart__form">
+                <input class="modal-cart__input" id="s" type="radio" name="toggle" checked>
+                <label class="modal-cart__label" for="s" tabindex="0">S</label>
+                <input class="modal-cart__input" id="m" type="radio" name="toggle">
+                <label class="modal-cart__label" for="m" tabindex="0">M</label>
+                <input class="modal-cart__input" id="l" type="radio" name="toggle">
+                <label class="modal-cart__label" for="l" tabindex="0">L</label>
+            </form>
+            <button class="modal-cart__button" type="submit">Добавить в корзину</button>
+            <button class="button-close" id="button-close" type="button"
+                aria-label="Закрыть форму заказа товара недели">
+                <span class="modal-cart__span"></span>
+            </button>
+        </div>
+    </section>
+    <div class="background-modal"></div>
+    <script src="./js/script.min.js"></script>
+</body>
+
+</html>

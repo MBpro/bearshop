@@ -1,0 +1,117 @@
+.form{
+    margin-bottom: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media(min-width: $tablet-width){
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.form__title{
+    position: relative;
+    display: block;
+    margin-left:-30px;
+    margin-top: 0;
+    margin-right: -30px;
+    margin-bottom: 24px;
+    padding-top: 73px;
+    padding-bottom: 73px;
+    @include mobile-title;
+    color: #231f20;
+    background-color:#cecece;
+
+    @media(min-width: $tablet-width){
+        @include tablet-title;
+        padding-top: 100px;
+        padding-bottom: 80px;
+        margin-left:-50px;
+        margin-right: -50px; 
+        margin-bottom: 70px;
+    }
+
+    @media(min-width: $tablet-width){
+        @include desktop-title;
+    }
+
+    &::before{
+        @media(min-width: $tablet-width){
+            @include svg-background(1, -12px, 0, 100%, 32px, repeat-x); //$z-index, $bottom, $left, $width, $height, $repeat
+            background-image: url("../img/bg-zigzag.svg");
+            background-position-x: 6px;
+        }
+    }
+}
+
+.form__text{
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #444444;
+
+    @media(min-width: $tablet-width){
+        margin-bottom: 65px;
+        padding-right: 90px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    @media(min-width: $desktop-width){
+        padding-right: 200px;
+        padding-left: 175px;
+    }
+}
+
+.form__wrapper{
+    @media(min-width: $tablet-width){
+       display: flex;
+       justify-content:  space-between;
+    }
+
+    @media(min-width: $desktop-width){
+        width: 750px;
+        margin-left: 175px;
+    }
+}
+
+.form__instruction{
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    color:#444444;
+
+    @media(min-width: $tablet-width){
+        order: 1;
+        margin-bottom: 0;
+        padding-top: 8px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+.form__button{
+    display: block;
+    padding: 16px 47px;
+    font-style: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: 2px solid black;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    transition:all 0.3s ease 0s;
+
+    &:hover,
+    &:focus{
+        color: #ffffff;
+        background-color: #444444;
+        transition:all 0.3s ease 0s;
+    }
+
+    &:active{
+        color: #7c7c7c;
+    }
+}

@@ -11,7 +11,7 @@
 <body>
 
     <div style="display: none">
-        <include src="bearshop/img/sprite.svg"></include>
+        @@include('img/sprite.svg')
     </div>
 
     <header class="page-header">
@@ -26,10 +26,10 @@
                 <span class="main-nav__span"></span>
             </button>
             <ul class="main-nav__list main-nav__list--offjs main-nav__list--catalog">
-                <li class="main-nav__item main-nav__item--catalog"><a class="main-nav__link" href="#"
+                <li class="main-nav__item main-nav__item--catalog"><a class="main-nav__link" href="catalog.html"
                         target="_blank">Каталог
                         товаров</a></li>
-                <li class="main-nav__item main-nav__item--knitting"><a class="main-nav__link" href="#"
+                <li class="main-nav__item main-nav__item--knitting"><a class="main-nav__link" href="./form.html"
                         target="_blank">Вязание на
                         заказ</a></li>
             </ul>
@@ -117,7 +117,7 @@
                 </picture>
                 <footer class="top-product__footer">
                     <p class="top-product__price">Цена: 990 руб.</p>
-                    <a href="../modal-index.html" class="top-product__link" id="modal-on" target="_blank">Заказать</a>
+                    <a href="../modal-index.html" class="top-product__link modal-on" target="_blank">Заказать</a>
                 </footer>
             </div>
         </article>
