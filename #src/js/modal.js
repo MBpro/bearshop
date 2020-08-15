@@ -21,3 +21,14 @@ buttonClose.addEventListener('click', function (evt) {
     bodyLock.classList.remove('body-lock');
 })
 
+window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+        if (popup.classList.contains('js-modal-cart-show') && ('js-background-modal-show')) {
+            popup.classList.remove('js-modal-cart-show');
+            backgroundModal.classList.remove('js-background-modal-show');
+            bodyLock.classList.remove('body-lock');
+        }
+    }
+})
+
+
